@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="row mt-1">
+
+    <div class="col-12">
+    <img src="{% static 'images/image4.jpeg' %}" height=400px" width="100%"></div>
+</div>
+
+<div class="row mt-2" style="margin-bottom:100px">
+    <div class="col-12">
+        <h3 class="text-center fw-bold mt-3 mb-2 text-light">our collections</h3>
+        <p style="text-align:justify;line-height:2.5;" class="fs-5"> An e-commerce website, simply put, is an online store. It's a platform where goods and services are traded between buyers and sellers over the internet. Unlike a physical storefront, an e-commerce website can be accessed at any time, from anywhere, as long as there's an internet connection.</p>
+    </div>
+</div>
+    <div class="container mt-5 mb-5">
+    <div class="row">
+        {% for i in cat %}
+        <div class="col-sm-4">
+            <div class="card" style="width: 18rem;">
+  <img src="{{i.image.url}}" height="200px" width="100%" class="card-img-top" alt="...">
+  <div class="card-body text-center">
+    <h5 class="card-title">{{i.name}} </h5>
+
+    <a href="{% url 'shop:products' i.id %} " class="btn btn-primary">Products</a>
+  </div>
+</div></div>
+        {% endfor %}
+        </div>
+
+    </div>
+
+
+{% endblock %}

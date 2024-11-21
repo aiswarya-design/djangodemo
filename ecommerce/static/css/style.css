@@ -1,0 +1,12 @@
+body{
+background-color:#A88BA6;
+}
+.footer
+{
+position:fixed;
+bottom:0;
+left:0;
+background-color:white;
+height:40px;
+width:100%;
+}
