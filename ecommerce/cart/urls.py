@@ -20,7 +20,7 @@ from django.urls import path
 from cart import views
 app_name="cart"
 urlpatterns = [
-path('addtocart/<int:p>',views.add_to_cart,name="addtocart"),
+    path('addtocart/<int:p>',views.add_to_cart,name="addtocart"),
     path('cartview',views.cart_view,name="cartview"),
     path('cartremove/<int:i>',views.cart_remove,name="cartremove"),
     path('cartdelete/<int:i>',views.cart_delete,name="cartdelete"),
